@@ -1,0 +1,15 @@
+.container{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.altaTitulo{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.altaInput{
+    display: flex;
+    flex-direction: column;
+}

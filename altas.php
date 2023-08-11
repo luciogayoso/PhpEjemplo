@@ -5,6 +5,8 @@
 
 <?php 
 
+include 'menu.php';
+
 $ape = $_POST['apellido'];
 $nom = $_POST['nombre'];
 $ed = $_POST['edad'];

@@ -1,4 +1,6 @@
-
+<?php
+include 'menu.php';
+?>
 <html lang="es">
 <h3>LISTADO DE LOS REGISTRO DE LA TABLA</h3>
 </html>

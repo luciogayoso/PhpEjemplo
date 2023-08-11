@@ -5,6 +5,9 @@
 
 <?php 
 
+include 'menu.php';
+
+
 $ape = $_POST['apellido'];
 
 $base = "gestion";
