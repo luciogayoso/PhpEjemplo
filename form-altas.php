@@ -20,14 +20,19 @@ include 'menu.php';
 		<input type="text" name="apellido"><br>
 		</div>
 		
-
+		<div class="grupoInputs">
 		<label for="nombre">Nombre:</label>
 		<input type="text" name="nombre"><br>
+        </div>
 
+		<div class="grupoInputs">
 		<label for="edad">Edad:</label>
 		<input type="text" name="edad"><br>
+	    </div>
 
+		<div class="btn-submit">
 		<input type="submit" value="Grabar"><br>
+	    </div>
 	</form>
 </div>
 	

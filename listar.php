@@ -2,41 +2,44 @@
 include 'menu.php';
 ?>
 <html lang="es">
-<h3>LISTADO DE LOS REGISTRO DE LA TABLA</h3>
-</html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulario de Altas</title>
+	<link rel="stylesheet" href="css/respuestas.css">
+	</head>
+	<body>
+	<h3 class="tablatitulo">LISTADO DE LOS REGISTRO DE LA TABLA</h3>
 
-
-<?php 
+	<table class="tabla">
+		<caption class="ttitulo">Lista de usuarios</caption>
+		<thead class="ttitulo">
+			<tr>
+			<th>ID</th>
+			<th>Apellido</th>
+			<th>Nombre</th>
+			<th>Edad</th>
+			</tr>
+		</thead>
+	<?php 
 
 $base = "gestion";
 $Conexion =  mysqli_connect("localhost","root","",$base);
-if($Conexion){
-	echo "la conexion fue exitosa "."<br>";
 
-}else{
-	echo "la conexion ha fallado "."<br>";
-}
-
-$cadena= "SELECT * FROM persona WHERE 1";
+$cadena= "SELECT * FROM persona ";
 
 $consulta = mysqli_query($Conexion,$cadena);
 
-
 while(  $registro = mysqli_fetch_row($consulta)   ){
-	echo $registro[0]." ".$registro[1].$registro[2]."<br>";
+	echo "<tr class='trmain'>";
+	echo "<th>".$registro[0]."</th>"."<th>".$registro[1]."</th>"."<th>".$registro[2]."</th>"."<th>".$registro[3]."</th>";
+	echo "</tr>";
 }
  ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	<a href="menu.php">Volver</a>
-	
-</body>
+    </table>
+	</body>
 </html>
+
+
+
+
