@@ -1,24 +1,162 @@
-body{
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+html body{
     margin: 0;
     padding: 0;
-    background-color: aliceblue;
 }
 
-.header{
+#contenedor{
+    display:flex;
+}
+
+#header{
+    height:100vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    background-color: rgb(72, 26, 26);
+    color:white;
+    padding-left: 1em;
+}
+
+#nav ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    text-align:right;
+    padding-right:1em;
+}
+
+#nav ul li{
+    padding:2em;
+}
+
+#nav ul li a{
+    text-decoration:none;
+    color:white;
+}
+
+#main{
+    margin-left: 31.5%;
     display: flex;
     flex-direction: column;
-    background-color: gainsboro;
-    height: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner{
+    height:80vh;
+    width: 68.5vw;
+    background-image: url("../images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    color: rgb(4, 4, 4);
+}
+
+#banner img{
+    width: 100%;
 }
 
 .titulo{
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 3em;
+    margin: 0 auto;
+    text-shadow: 0.1em 0.1em #fdfdfd;
     text-align: center;
-    color: rgb(68, 66, 66);
+    font-family: 'Dosis', sans-serif;
+    animation: typing 2s steps(19) 1s 1 normal both, blink 1s steps(1) infinite;
 }
 
-.menu{
+.contenido1{
+    width: 0;
+    margin-top: 20%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2em;
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: 0.1em 0.1em #fdfdfd;
+    font-family: 'Dosis', sans-serif;
+    animation: typing 6s steps(30) 3s 1 normal both, blink 1s steps(1) infinite;
+}
+
+.contenido2{
+    width: 0;
+    margin-top: 20%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2em;
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: 0.1em 0.1em #fdfdfd;
+    font-family: 'Dosis', sans-serif;
+    animation: typing 6s steps(30) 6s 1 normal both, blink 1s steps(1) infinite;
+}
+
+.contenido3{
+    width: 0;
+    margin-top: 20%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2em;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    text-shadow: 0.1em 0.1em #fdfdfd;
+    animation: typing 6s steps(30) 9s 1 normal both, blink 1s steps(1) infinite;
+}
+
+#altas{
+    height:100vh;
+    width: 100%;
+    background-color: rgb(242, 231, 222);
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#altas .container{
+    background-color: rgb(246, 226, 196);
+    width: 60%;
+}
+
+#bajas{
+    height:100vh;
+}
+
+#modificacion{
+    height:100vh;
+}
+
+#listar{
+    height:100vh;
+    overflow-y: scroll;
+}
+
+#footer{
+    height:100vh;
+}
+
+/* .menu{
+    display:flex;
+    flex-direction:column;
+    background-color: gainsboro;
 }
 
 .menu a{
@@ -34,4 +172,4 @@ body{
     background-color: rgb(75, 90, 85);
     color: white;
     border-radius: 10px;
-}
+} */

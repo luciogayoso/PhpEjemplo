@@ -1,7 +1,79 @@
-.container{
-    margin: 50px;
+.form{
+    width: 100%;
+    font-family: 'Dosis', sans-serif;
+}
+
+.altaTitulo{
+    text-align: center;
+}
+
+.altaInput{
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.grupoInputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgPerfil{
+    align-self: center;
+    width: 200px;
+}
+
+.inputFile{
+    opacity: 0;
+    overflow: hidden;
+}
+
+.grupoInputs input{
+    border-bottom: 1px solid black;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: rgb(246, 226, 196);
+    cursor: pointer;
+}
+
+.grupoInputs input:hover{
+    border-bottom: 1px solid rgb(69, 146, 82);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color:rgb(13, 89, 26);
+}
+
+.grupoInputs input:active{
+    border-bottom: 1px solid rgb(69, 146, 82);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color:rgb(13, 89, 26);
+}
+
+.btn{
+    background-color:rgb(196, 127, 7);
+    color:white;
+}
+
+/* .container{
+    margin: 0;
+    padding:0;
+    display: flex;
+    flex-direction: row;
+}
+
+.header{
+    height:10vh;
+    text-align:center;
+}
+
+.navBar{
+    background-color: gainsboro;
+    height: 90vh;
 }
 
 .altaTitulo{
@@ -31,4 +103,4 @@
 .btn-submit{
     width: 20%;
     align-self:flex-end;
-}
+} */
