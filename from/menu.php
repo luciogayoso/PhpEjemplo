@@ -26,12 +26,13 @@ header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
 
 <body>
 	<div id="contenedor">
-		<div id="header">
+
+		<div class="header">
 
 			<div class="top">
 				<!-- Logo -->
 				<div id="logo">
-					<span style="display:none" class="image avatar48"><img src="../images/menu.png" alt="" /></span>
+
 					<h1 id="title">Administra Usuario</h1>
 					<p>Gestiona los usurios de este sistema</p>
 				</div>
@@ -39,11 +40,15 @@ header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
 				<!-- Nav -->
 				<nav id="nav">
 					<ul>
-						<li><a href="#altas" id="altas-link"><span class="icon solid fa-home">Altas</span></a></li>
-						<li><a href="#bajas" id="bajas-link"><span class="icon solid fa-th">Bajas</span></a></li>
+						<li><a href="#altas" id="altas-link"><span class="icono-container">Altas<img class="icono"
+										src="../images/icono-alta.png"></span></a></li>
+						<li><a href="#bajas" id="bajas-link"><span class="icono-container">Bajas<img class="icono"
+										src="../images/icono-baja.png"></span></a></li>
 						<li><a href="#modificacion" id="modificacion-link"><span
-									class="icon solid fa-user">ModificacionMe</span></a></li>
-						<li><a href="#listar" id="listar-link"><span class="icon solid fa-envelope">Listar</span></a>
+									class="icono-container">ModificacionMe<img class="icono"
+										src="../images/icono-modificar.png"></span></a></li>
+						<li><a href="#listar" id="listar-link"><span class="icono-container">Listar<img class="icono"
+										src="../images/icono-listar.png"></span></a>
 						</li>
 					</ul>
 				</nav>
@@ -51,14 +56,11 @@ header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
 			</div>
 		</div>
 
-		<div id="main">
-
-			<section id="banner">
+		<div class="main">
+			<span class="image-menu"><img src="../images/menu.png" alt="" /></span>
+			<section class="banner">
 				<div class="container">
-					<h2 class="titulo">Administrar Usuario</h2>
-					<h3 class="contenido1">Este sistem esta encargo de mantener</h3>
-					<h3 class="contenido2">todo la informacion de sus auuario</h3>
-					<h3 class="contenido3">para una correcto fucionamientos</h3>
+					<h2 class="titulo">Administración de Usuario</h2>
 				</div>
 			</section>
 
@@ -127,6 +129,8 @@ header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
 	<a href="listar.php">Listado de personas</a><br>
 
 	</div> -->
+
+	<script src="../js/menu.js"></script>
 </body>
 
 </html>
