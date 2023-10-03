@@ -13,6 +13,7 @@ menu.addEventListener("click", function () {
     banner1.className = "banner";
     console.log("funciono---");
   }
+
   if (header) {
     header.className = "header-cambio";
     main.className = "main-cambio";
