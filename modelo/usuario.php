@@ -39,12 +39,12 @@ function getUsuarioUsersNames()
     border-right: 0;
     width:15em;
     font-size:1.5em;
-    cursor: pointer' name='userName'>";
+    cursor: pointer' name='userName'><option value=''selected='true' disabled>Seleccione una opcion</option>";
+
 
     while ($registro = mysqli_fetch_row($consulta)) {
         $html = $html . "<option value=" . $registro[0] . ">" . $registro[0] . "</option>";
     }
-
     $html = $html . "</select>";
     return $html;
 }
@@ -52,17 +52,34 @@ function getUsuarioUsersNames()
 function getUsuarioUserName($userName)
 {
     $Conexion = include("conexion.php");
-    $cadena = "SELECT * FROM persona where usuario=" . $userName;
-
+    $cadena = "SELECT * FROM persona WHERE usuario ='" . $userName . "'";
     $consulta = mysqli_query($Conexion, $cadena);
-    $html = "<select name='userName'>";
-
+    $array = array();
     while ($registro = mysqli_fetch_row($consulta)) {
-        $html = +"<option value=" . $registro[0] . ">" . $registro[0] . "</option>";
+        array_push($array, array('id' => $registro[0], 'apellido' => $registro[1], 'nombre' => $registro[2], 'fecha' => $registro[3], 'foto' => base64_encode($registro[4]), 'usuario' => $registro[5], 'clave' => $registro[6]));
     }
+    return $array;
+}
 
-    $html = +"</select>";
-    return $html;
+function getUsuarioUserNames()
+{
+    $Conexion = include("conexion.php");
+    $cadena = "SELECT usuario FROM persona ";
+    $consulta = mysqli_query($Conexion, $cadena);
+    $array = array();
+    while ($registro = mysqli_fetch_row($consulta)) {
+        array_push($array, array('usuario' => $registro[0]));
+    }
+    return $array;
+}
+
+function deleteUser($userName)
+{
+    $Conexion = include("conexion.php");
+    $cadena = "DELETE FROM persona  WHERE usuario = '$userName'";
+    $resultado = mysqli_query($Conexion, $cadena);
+
+    return $resultado;
 }
 
 ?>

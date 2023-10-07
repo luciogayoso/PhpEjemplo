@@ -11,13 +11,11 @@ menu.addEventListener("click", function () {
     header1.className = "header";
     main1.className = "main";
     banner1.className = "banner";
-    console.log("funciono---");
   }
 
   if (header) {
     header.className = "header-cambio";
     main.className = "main-cambio";
     banner.className = "banner-cambio";
-    console.log("funciono");
   }
 });

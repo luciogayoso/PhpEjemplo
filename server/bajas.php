@@ -1,47 +1,30 @@
-
-<html lang="es">
-</html>
-
-
-<?php 
-
-include 'menu.php';
-
-
-$ape = $_POST['apellido'];
-
-$base = "gestion";
-$Conexion =  mysqli_connect("localhost","root","",$base);
-if($Conexion){
-	echo "la conexion fue exitosa "."<br>";
-
-}else{
-	echo "la conexion ha fallado "."<br>";
-}
-
-$cadena= "DELETE FROM persona  WHERE apellido = '$ape'";  
-
-$resultado = mysqli_query($Conexion,$cadena);
-
-if($resultado){
-	echo "se ha eliminado un registro"."<br>";
-
-}else{
-	echo "NO se ha eliminado un registro"."<br>";
-	echo mysqli_error($Conexion);
-}
-
- ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Server altas</title>
+	<link rel="stylesheet" href="../css/respuesta-alta.css">
 </head>
-<body>
-	<a href="form-bajas.php">Volver</a>
-	
-</body>
-</html>
+
+<?php
+
+include("../modelo/usuario.php");
+
+$use = $_POST['userName'];
+
+$result = deleteUser($use);
+
+if ($result) {
+	return include("../from/respuestas-server/respuesta-baja.php");
+} else {
+	echo '<div class="Rcontainer">
+    <div class="Rbox">
+        <h2 class="Rtitulo">Esta es una respuesta del servidor</h2>
+        <h3 class="Rcuerpo">No se pudo eliminar correctamente este registro</h3>
+        <a href="../from/menu.php" class="cerrar">Cerrar</a>
+    </div>
+</div>';
+}
+?>
