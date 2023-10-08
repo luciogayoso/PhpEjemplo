@@ -121,6 +121,42 @@
     justify-content:flex-end;
 }
 
+.listaModificar{
+    list-style:none;
+}
+
+.listaModificar:hover{
+    list-style:none;
+    background-color:rgb(75, 75, 249);
+    color:white;
+}
+
+.grupoInputsModificar{
+    width:70%;
+}
+
+.grupoInputsModificar input{
+    margin-top:20px;
+}
+
+.grupoInputsCambiar{
+    display:flex;
+}
+
+#campoReferencia{
+    background-color:white;
+    border:0;
+    margin-top:30px;
+    width:100%;
+}
+
+.busqueda{
+    width:100%;
+    margin:0 0 20px 0;
+    border:1px solid black;
+    padding:0;
+}
+
 /* .container{
     margin: 0;
     padding:0;

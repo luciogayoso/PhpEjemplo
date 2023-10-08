@@ -1,43 +1,34 @@
 <div class="form">
 	<h3 class="modificarTitulo">FORMULARIO DE MODIFICACION</h3>
 	<form class="modificarInput" action="modificacion.php" method="POST">
-		<div class="grupoInputs">
-			<label for="usuario">Indique un nombre de usuario:</label>
-			<div class="grupoInputs">
-				<input id="campoReferencia" type="text" placeholder="usuario"><br>
-				<ul class="busqueda"></ul>
-			</div>
+		<div class="grupoInputsModificar">
+			<label for="usuario">Indique un nombre de usuario:</label><br>
+			<input id="campoReferencia" type="text" placeholder="usuario" /><br>
+			<ul class="busqueda"></ul>
 		</div>
 
-		<br><br>
 		Campos a modificar:<br>
 
-		<div class="grupoInputs">
-			<img onclick="seleccionarArchivo()" id="imgPerfil" src="../images/fotoPerfil.png" alt="">
-			<input type="file" class="inputFile" placeholder="foto de perfil" name="foto"><br>
-		</div>
+		<div class="grupoInputsCambiar">
+			<div class="imagenUsuario">
+				<img onclick="seleccionarArchivo()" id="imgPerfilModificar" src="../images/fotoPerfil.png" alt="">
+				<input type="file" class="inputFile" placeholder="foto de perfil" name="foto"><br>
+			</div>
+			<div class="grupoInputsModificar">
+				<input type="text" id="clave" placeholder="clave" name="clave"><br>
 
-		<div class="grupoInputs">
-			<input type="text" placeholder="usuario" name="usuario"><br>
-		</div>
+				<input type="text" id="apellido" placeholder="Apellido" name="apellido"><br>
 
-		<div class="grupoInputs">
-			<input type="text" placeholder="clave" name="clave"><br>
-		</div>
+				<input type="text" id="nombre" placeholder="nombre" name="nombre"><br>
 
-		<div class="grupoInputs">
-			<input type="text" placeholder="Apellido" name="apellido"><br>
-		</div>
+				<input type="date" id="fecha" placeholder="fecha" name="fecha"><br>
 
-		<div class="grupoInputs">
-			<input type="text" placeholder="nombre" name="nombre"><br>
-		</div>
-
-		<div class="grupoInputs">
-			<input type="date" placeholder="fecha" name="fecha"><br>
-		</div>
-		<div class="btn-submit">
-			<input type="submit" value="Modificar"><br>
+				<div class="btn-submit">
+					<input type="submit" value="Modificar"><br>
+				</div>
+			</div>
 		</div>
 	</form>
 </div>
+
+<script src="../js/form-modificar.js"></script>
