@@ -12,7 +12,7 @@ formBaja.addEventListener("submit", function (e) {
     modal.innerHTML = html;
   } else {
     let html = `<div class="container-modal">
-    <h2>¿Esta seguro que sea eliminar este registro?</h2>
+    <h2>¿Esta seguro que desea eliminar este registro?</h2>
     <p class="btn-modal" onclick="EnviarDelete()">Aceptar</p></div>
     </div>`;
     modal.innerHTML = html;
@@ -56,6 +56,7 @@ selected.addEventListener("change", function (e) {
 });
 
 function cerrarModal() {
+  console.log("cerrar");
   let modal = document.querySelector("#modal");
   modal.innerHTML = "";
   modal.className = "";

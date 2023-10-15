@@ -7,15 +7,16 @@ function seleccionarArchivo() {
 
 let input = document.querySelector(".inputFile");
 input.addEventListener("change", function () {
-  let img = document.querySelector("#imgPerfil");
+  let imgAlta = document.querySelector("#imgPerfil");
   const archivos = input.files;
+  console.dir(imgAlta);
   if (!archivos || !archivos.length) {
-    img.src = "";
+    imgAlta.src = "";
     return;
   }
   const primerArchivo = archivos[0];
   const objectURL = URL.createObjectURL(primerArchivo);
 
-  img.src = objectURL;
-  img.style = "width:200px;height:200px;border-radius: 100%";
+  imgAlta.src = objectURL;
+  imgAlta.style = "width:200px;height:200px;border-radius: 100%";
 });
