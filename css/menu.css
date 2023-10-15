@@ -21,11 +21,72 @@ html body{
     display:flex;
 }
 
+.contenedor{
+    width:100%;
+}
+
 .header{
     display:none;
 }
 
+.main{
+    margin-left: 0;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x:hidden;
+}
+
+#bajas{
+    height:100vh;
+    width: 100%;
+    background-color: rgb(253, 251, 250);
+    display: flex;
+    font-size:q 1em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#modificacion{
+    height:auto;
+    display:flex;
+    justify-content:center;
+}
+
+#modificacion .container{
+    display:flex;
+    justify-content:center;
+    width:60vw;
+}
+
+#listar{
+    height:100vh;
+    overflow-y: scroll;
+    width:80vw;
+}
+
+#footer{
+    height:30vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    margin-top:20px;
+    color:white;
+    background-color:rgba(4, 1, 21, 0.796);
+}
+
+#footer ul{
+    list-style:none;
+}
+
+@media (min-width: 800px) {
+
 .header-cambio{
+    transition:5s ease-in;
     height:100vh;
     position: fixed;
     bottom: 0;
@@ -46,12 +107,15 @@ html body{
 
 .image-menu{
     align-self:flex-start;
+    height: 80px;
     margin: 10px;
 }
 
 .image-menu img{
-    background-color:white;
-    width: 30px;
+    position:fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;
 }
 
 #nav ul li{
@@ -67,25 +131,19 @@ html body{
     color:rgb(6, 6, 6);
 }
 
-.main{
-    margin-left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .main-cambio{
-    margin-left: 31.5%;
+    margin-left: 30%;
     display: flex;
+    width:70%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x:hidden;
 }
 
 .banner{
     height:100vh;
-    width: 100vw;
+    width: 100%;
     background-image: url("../images/banner.jpg");
     background-repeat: no-repeat;
     background-size: 100% 50%;
@@ -94,7 +152,7 @@ html body{
 
 .banner-cambio{
     height:80vh;
-    width: 68.5vw;
+    width: 100%;
     background-image: url("../images/banner.jpg");
     background-repeat: no-repeat;
     background-size: 100% 50%;
@@ -134,8 +192,12 @@ html body{
     align-items:center;
 }
 
+.top{
+    padding-top:80px;
+}
+
 #altas{
-    height:100vh;
+    height:auto;
     width: 100%;
     background-color: rgb(242, 231, 222);
     display: flex;
@@ -149,26 +211,280 @@ html body{
     width: 60%;
 }
 
-#bajas{
+#listar{
+    height:100vh;
+    overflow-y: scroll;
+    width:80vw;
+}
+}
+
+@media (min-width: 400px) and (max-width:800px){
+
+.header-cambio{
+    transition:5s ease-in;
+    height:100vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    background-color: rgb(202, 226, 246);
+    color:rgb(6, 6, 6);
+    padding:0;
+}
+
+#logo{
+    display:none;
+}
+
+#nav ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    text-align:right;
+    font-size:0;
+    padding-top: 100px;
+    padding-left:0;
+}
+
+.image-menu{
+    align-self:flex-start;
+    height: 80px;
+}
+
+.image-menu img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+}
+
+#menuLateral{
+    width: 80px;
+}
+
+#nav ul li{
+    padding:2em;
+}
+
+#nav ul li:hover{
+    border:1px solid rgb(4, 4, 4);
+}
+
+#nav ul li a{
+    text-decoration:none;
+    color:rgb(6, 6, 6);
+}
+
+.main-cambio{
+    margin-left: 20%;
+    display: flex;
+    width:80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x:hidden;
+}
+
+.icono{
+    width:60px;
+}
+
+.icono-container{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+}
+
+.banner{
+    display:flex;
+    justify-content:center;
     height:100vh;
     width: 100%;
-    background-color: rgb(253, 251, 250);
+    background-image: url("../images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    color: rgb(4, 4, 4);
+}
+
+.banner-cambio{
+    display:flex;
+    justify-content:center;
+    height:80vh;
+    width: 100%;
+    background-image: url("../images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    color: rgb(4, 4, 4);
+}
+
+.banner img{
+    width: 100%;
+}
+
+.titulo{
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2em;
+    margin: 0 auto;
+    padding-top:100px;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    animation: typing 2s steps(19) 1s 1 normal both, blink 1s steps(1) infinite;
+}
+
+#altas{
+    height:auto;
+    width: 100%;
+    background-color: rgb(242, 231, 222);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-#modificacion{
-    height:100vh;
+#altas .container{
+    background-color: rgb(246, 226, 196);
+    width: 100%;
 }
 
 #listar{
     height:100vh;
     overflow-y: scroll;
+    width:100vw;
+}
 }
 
-#footer{
-    height:100vh;
-}
+@media (max-width: 400px) {
+    .header-cambio{
+        transition:5s ease-in;
+        height:100vh;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 18%;
+        background-color: rgb(202, 226, 246);
+        color:rgb(6, 6, 6);
+        padding:0;
+    }
+    
+    #logo{
+        display:none;
+    }
 
+    #nav ul{
+        list-style:none;
+        display:flex;
+        flex-direction:column;
+        text-align:right;
+        font-size:0;
+        padding-top: 150px;
+        padding-left:0;
+    }
+    
+    .image-menu{
+        height: 80px;
+    }
+    
+    .image-menu img{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 40px;
+    }
+    
+    #menuLateral{
+        width: 60px;
+    }
+    
+    #nav ul li{
+        padding:2em;
+    }
+    
+    #nav ul li:hover{
+        border:1px solid rgb(4, 4, 4);
+    }
+    
+    #nav ul li a{
+        text-decoration:none;
+        color:rgb(6, 6, 6);
+    }
+    
+    .main-cambio{
+        margin-left: 10%;
+        display: flex;
+        width:90%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-x:hidden;
+    }
+    
+    .icono{
+        width:40px;
+        margin-top:10px;
+    }
+    
+    .icono-container{
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center;
+    }
+    
+    .banner{
+        display:flex;
+        justify-content:center;
+        height:100vh;
+        width: 100%;
+        background-image: url("../images/banner.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 50%;
+        color: rgb(4, 4, 4);
+    }
+    
+    .banner-cambio{
+        display:flex;
+        justify-content:center;
+        height:80vh;
+        width: 100%;
+        background-image: url("../images/banner.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 50%;
+        color: rgb(4, 4, 4);
+    }
+    
+    .banner img{
+        width: 100%;
+    }
+
+    .titulo{
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 2em;
+        margin: 0 auto;
+        padding-top:100px;
+        text-align: center;
+        font-family: 'Dosis', sans-serif;
+        animation: typing 2s steps(19) 1s 1 normal both, blink 1s steps(1) infinite;
+    }
+    
+    #altas{
+        height:100vh;
+        width: 100%;
+        background-color: rgb(242, 231, 222);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #altas .container{
+        background-color: rgb(246, 226, 196);
+        width: 100%;
+    }
+
+    
+}
