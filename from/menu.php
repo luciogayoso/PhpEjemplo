@@ -57,7 +57,7 @@ header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
 		</div>
 
 		<div class="main">
-			<span class="image-menu"><img src="../images/menu.png" alt="" /></span>
+			<div class="image-menu"><img id="menuLateral" src="../images/menu.png" alt="" /></div>
 			<section class="banner">
 				<div class="container">
 					<h2 class="titulo">Administración de Usuario</h2>
@@ -100,37 +100,23 @@ header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
 				</div>
 			</section>
 
-
 			<!-- Footer -->
 			<footer id="footer">
-
 				<!-- Copyright -->
 				<ul class="copyright">
 					<li>&copy; Untitled. All rights reserved.</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					<li>Design: <a href="">VSLA Developer</a></li>
+					<li></li>
 				</ul>
-
 			</footer>
-
 		</div>
-
-
-
-
 	</div>
 
-
-
-	<!-- <div class="menu">		
-	
-	<a href="index.php">Alta</a><br>
-	<a href="form-bajas.php">Bajas</a><br>
-	<a href="form-modificacion.php">Modificaciones</a><br>
-	<a href="listar.php">Listado de personas</a><br>
-
-	</div> -->
-
 	<script src="../js/menu.js"></script>
+	<script src="../js/form-altas.js"></script>
+	<script src="../js/form-baja.js"></script>
+	<script src="../js/form-modificar.js"></script>
+	<script src="../js/animacionInput.js"></script>
 </body>
 
 </html>

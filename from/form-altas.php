@@ -2,8 +2,8 @@
 	<h3 class="altaTitulo">FORMULARIO DE ALTA</h3>
 	<form class="altaInput" action="../server/altas.php" method="POST" enctype="multipart/form-data">
 		<div class="grupoInputs">
-			<img onclick="seleccionarArchivo()" id="imgPerfil" src="../images/fotoPerfil.png" alt="">
-			<input type="file" class="inputFile" placeholder="foto de perfil" name="foto"><br>
+			<img onclick="seleccionarArchivo()" src="../images/fotoPerfil.png" id="imgPerfil" alt="">
+			<input type="file" class="inputFile" name="foto"><br>
 		</div>
 
 		<div class="grupoInputs">
@@ -31,5 +31,3 @@
 		</div>
 	</form>
 </div>
-
-<script src="../js/form-altas.js"></script>

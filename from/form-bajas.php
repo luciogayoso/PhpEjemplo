@@ -17,5 +17,3 @@
 		</div>
 	</form>
 </div>
-
-<script src="../js/form-baja.js"></script>
