@@ -1,37 +1,174 @@
-body{
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+html body{
     margin: 0;
     padding: 0;
-    background-color: aliceblue;
+}
+
+#contenedor{
+    display:flex;
 }
 
 .header{
-    display: flex;
-    flex-direction: column;
-    background-color: gainsboro;
-    height: 120px;
+    display:none;
 }
 
-.titulo{
-    text-align: center;
-    color: rgb(68, 66, 66);
+.header-cambio{
+    height:100vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    background-color: rgb(202, 226, 246);
+    color:rgb(6, 6, 6);
+    padding-left: 1em;
 }
 
-.menu{
-    display: flex;
-    justify-content: space-around;
+#nav ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    text-align:right;
+    padding-right:1em;
 }
 
-.menu a{
-    text-decoration: none;
-    padding: 10px;
-    color: rgb(71, 69, 69);
-    background-color: gainsboro;
+.image-menu{
+    align-self:flex-start;
     margin: 10px;
 }
 
-.menu a:hover{
-    border: 1px solid rgb(56, 55, 55);
-    background-color: rgb(75, 90, 85);
-    color: white;
-    border-radius: 10px;
+.image-menu img{
+    background-color:white;
+    width: 30px;
 }
+
+#nav ul li{
+    padding:2em;
+}
+
+#nav ul li:hover{
+    border:1px solid rgb(4, 4, 4);
+}
+
+#nav ul li a{
+    text-decoration:none;
+    color:rgb(6, 6, 6);
+}
+
+.main{
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-cambio{
+    margin-left: 31.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner{
+    height:100vh;
+    width: 100vw;
+    background-image: url("../images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    color: rgb(4, 4, 4);
+}
+
+.banner-cambio{
+    height:80vh;
+    width: 68.5vw;
+    background-image: url("../images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    color: rgb(4, 4, 4);
+}
+
+.banner img{
+    width: 100%;
+}
+
+.banner .container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:50vh;
+}
+
+.titulo{
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 3em;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    animation: typing 2s steps(19) 1s 1 normal both, blink 1s steps(1) infinite;
+}
+
+.icono{
+    width:40px;
+}
+
+.icono-container{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+#altas{
+    height:100vh;
+    width: 100%;
+    background-color: rgb(242, 231, 222);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#altas .container{
+    background-color: rgb(246, 226, 196);
+    width: 60%;
+}
+
+#bajas{
+    height:100vh;
+    width: 100%;
+    background-color: rgb(253, 251, 250);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#modificacion{
+    height:100vh;
+}
+
+#listar{
+    height:100vh;
+    overflow-y: scroll;
+}
+
+#footer{
+    height:100vh;
+}
+

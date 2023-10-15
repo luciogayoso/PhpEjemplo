@@ -1,7 +1,177 @@
-.container{
-    margin: 50px;
+.form{
+    width: 100%;
+    font-family: 'Dosis', sans-serif;
+}
+
+.altaTitulo{
+    text-align: center;
+}
+
+.bajaTitulo{
+    text-align: center;
+    font-size:2em;
+}
+
+.modal{
+    background-color:rgb(89, 87, 87,0.5);
+    position:absolute;
+    top: 1300px;
+    left:0;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container-modal{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width: 300px;
+    border:1px solid black;
+    margin: 20px;
+    padding: 20px;
+    background-color:white;
+}
+
+.btn-modal{
+    background-color:white;
+    color:black;
+    width: 100px;
+    border:1px solid black;
+    text-align:center;
+    cursor:pointer;
+}
+
+.btn-modal:hover{
+    background-color:rgb(103, 19, 248);
+    color:rgb(254, 254, 254);
+}
+
+.data{
+    opacity:0;
+    overflow:hidden;
+    width:50vw;
+}
+
+.altaInput .bajaInput{
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.grupoInputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+}
+
+.grupoInputs label{
+    font-size:2em;
+}
+
+.imgPerfil{
+    align-self: center;
+    width: 200px;
+}
+
+.inputFile{
+    opacity: 0;
+    overflow: hidden;
+}
+
+.grupoInputs input{
+    border-bottom: 1px solid black;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: rgb(246, 226, 196);
+    cursor: pointer;
+}
+
+.grupoInputs input:hover{
+    border-bottom: 1px solid rgb(69, 146, 82);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color:rgb(13, 89, 26);
+}
+
+.grupoInputs input:active{
+    border-bottom: 1px solid rgb(69, 146, 82);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color:rgb(13, 89, 26);
+}
+
+.btn{
+    background-color:rgb(196, 127, 7);
+    color:white;
+}
+
+.container-select{
+    margin: 2em;
+}
+
+.btn-baja{
+    display:flex;
+    justify-content:flex-end;
+}
+
+.listaModificar{
+    list-style:none;
+}
+
+.listaModificar:hover{
+    list-style:none;
+    background-color:rgb(75, 75, 249);
+    color:white;
+}
+
+.grupoInputsModificar{
+    width:70%;
+}
+
+.grupoInputsModificar input{
+    margin-top:20px;
+}
+
+.grupoInputsCambiar{
+    display:flex;
+}
+
+#campoReferencia{
+    background-color:white;
+    border:0;
+    margin-top:30px;
+    width:100%;
+}
+
+.busqueda{
+    width:100%;
+    margin:0 0 20px 0;
+    border:1px solid black;
+    padding:0;
+}
+
+/* .container{
+    margin: 0;
+    padding:0;
+    display: flex;
+    flex-direction: row;
+}
+
+.header{
+    height:10vh;
+    text-align:center;
+}
+
+.navBar{
+    background-color: gainsboro;
+    height: 90vh;
 }
 
 .altaTitulo{
@@ -31,4 +201,4 @@
 .btn-submit{
     width: 20%;
     align-self:flex-end;
-}
+} */
